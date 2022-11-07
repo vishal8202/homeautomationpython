@@ -22,9 +22,16 @@ while True:
         print("Data Inserted Successfully")
     elif choice==2:
         print("view all values selected")
+        sql = "SELECT `temperature`, `humidity`, `moisture`, `date` FROM `sensorvalues` "
+        mycursor.execute(sql)
+        result = mycursor.fetchall()
+        for i in result:
+            print(i)
         
     elif choice==3:
         print("search values with date selected")
+        
+
     
     elif(choice==4):
         break
